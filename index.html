@@ -13,7 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhancements.css">
   <script src="script.js" defer></script>
+  <script src="enhancements.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -32,6 +34,7 @@
     <div class="header-actions"><a href="#verdict" class="header-cta">The verdict <span aria-hidden="true">↗</span></a><button id="menu-toggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#problem">01 · The problem</a><a href="#data">02 · Evidence</a><a href="#research">03 · Research</a><a href="#solution">04 · The proposal</a><a href="#sources">Sources</a></nav>
   </header>
+  <nav class="chapter-rail" aria-label="Story chapters"><a href="#top" data-chapter="top" aria-label="Introduction"><span>00</span></a><a href="#problem" data-chapter="problem" aria-label="Problem"><span>01</span></a><a href="#data" data-chapter="data" aria-label="Evidence"><span>02</span></a><a href="#research" data-chapter="research" aria-label="Research"><span>03</span></a><a href="#solution" data-chapter="solution" aria-label="Proposal"><span>04</span></a><a href="#verdict" data-chapter="verdict" aria-label="Verdict"><span>05</span></a></nav>
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top" aria-labelledby="hero-title">
@@ -72,6 +75,16 @@
       <div class="shell impact-grid"><div class="impact-intro"><span class="tiny-label">THE EVENTS / APRIL 2024</span><h2>When the river<br>crossed the threshold.</h2></div><div class="impact-number"><strong>10,345</strong><span>people evacuated in North Kazakhstan, reported 16 April <a href="#ref-01">[01]</a></span></div><div class="impact-number"><strong>2,000<span class="plus">+</span></strong><span>homes reported flooded in the region by 16 April <a href="#ref-01">[01]</a></span></div><div class="impact-number"><strong>142</strong><span>hydrological posts modeled by Tasqyn as of Feb 2025 <a href="#ref-08">[08]</a></span></div></div>
     </section>
 
+    <section aria-label="Photographic context from the 2024 flood" class="story-photograph reveal">
+<div aria-label="Aerial view of houses and streets submerged by the 2024 flood in Petropavl" class="photo-image" role="img"></div>
+<div class="photo-shade"></div>
+<div class="photo-copy shell">
+<span class="photo-index">THE PLACE BEHIND THE NUMBERS <span>01 / 03</span></span>
+<h2>Floodwater reached homes.<br/><em>But what reached people first?</em></h2>
+<p>A photograph of the 2024 flooding in Petropavl. The picture documents exposure, not whether individual residents received a warning.</p>
+<a href="https://greenpost.ua/ru/news/samaya-styhyjnaya-beda-za-80-let-v-kazahstane-masshtabnye-pavodky-vot-kak-vyglyadyt-odyn-yz-samyh-i67753" rel="noopener noreferrer" target="_blank">Photo: GreenPost, 19 April 2024. View source ↗</a>
+</div>
+</section>
     <!-- SECTION 1 -->
     <section class="section white-section" id="problem" aria-labelledby="problem-title">
       <div class="shell content-grid"><aside class="section-aside"><span class="section-code">1</span><div class="aside-rule"></div><span>THE PROBLEM</span><p>Physical danger is measurable.<br>Warning access is harder to see.</p></aside><div class="section-main">
@@ -83,6 +96,18 @@
         <div class="question-card"><div class="question-number">RESEARCH QUESTION</div><h3>Can AI-assisted, community-based warning coordination improve timely access to <em>actionable</em> flood information in North Kazakhstan (Petropavl) without reproducing inequalities in who gets protected?</h3><p>Case: Petropavl and flood-prone settlements nearby. Unit of analysis for a proposed pilot: affected communities and their warning channels, rather than personal risk scores.</p></div>
         <h3 class="minor-heading">What makes this a social-science problem?</h3>
         <div class="mechanisms"><article><span>01</span><h4>Institutional capacity</h4><p>Hydrometeorological agencies, local authorities, and emergency services must coordinate. A prediction can fail to become a usable message when responsibilities are fragmented.</p></article><article><span>02</span><h4>Communication inequality</h4><p>Different channels reach different audiences. Digital alerts, interpersonal networks, and public announcements have unequal coverage and accessibility.</p></article><article><span>03</span><h4>Trust & agency</h4><p>People interpret a warning through earlier experiences and practical constraints. Receiving an alert does not mean one can leave immediately.</p></article></div>
+        <div aria-label="Interactive explanation of the last mile between prediction and action" class="warning-path reveal">
+<div class="path-head"><span class="tiny-label">EXPLORE THE LAST MILE</span><h3>Where can a warning stop?</h3><p>Choose a stage to see what a forecasting system can, and cannot, establish.</p></div>
+<div aria-label="Warning stages" class="path-controls" role="group">
+<button aria-pressed="true" class="path-step active" data-path="forecast"><span class="path-icon">≈</span><span><small>01</small> Forecast</span></button>
+<span aria-hidden="true" class="path-connector"></span>
+<button aria-pressed="false" class="path-step" data-path="delivery"><span class="path-icon">↗</span><span><small>02</small> Delivery</span></button>
+<span aria-hidden="true" class="path-connector"></span>
+<button aria-pressed="false" class="path-step" data-path="action"><span class="path-icon">✓</span><span><small>03</small> Action</span></button>
+</div>
+<div aria-live="polite" class="path-reading"><span id="path-tag">WHAT WE CAN MEASURE</span><h4 id="path-title">The river is rising</h4><p id="path-copy">Gauges and forecasts can measure physical conditions. They cannot tell us whether someone has heard the warning.</p></div>
+<p class="path-caveat">Illustration of an information pathway, not a measured history of Petropavl households.</p>
+</div>
       <div class="analysis-panel"><span class="tiny-label accent-label">SCOPE / 2024–2026</span><h3>What exactly is being studied?</h3><p>The <strong>2024 disaster</strong> establishes the seriousness of the physical hazard; <strong>2025–2026 policy developments</strong> establish what forecasting and coordination services now exist. The proposed research does not assume that the same institutional gaps persisted unchanged across those years. It asks a narrower question: if official risk information is available, what organizational and social processes determine whether it becomes usable household guidance?</p><p>Petropavl and nearby flood-prone settlements are the geographic focus, but they are not interchangeable. Distances, available transport, housing locations, communication coverage and authority structures could differ. A real assessment should select communities on transparent criteria—flood exposure and practical warning access—and compare them without automatically treating rural residence, older age or lower income as evidence of vulnerability. The unit of analysis is the <em>warning pathway</em> in a community, not an AI label assigned to an individual citizen.</p></div>
       </div></div>
     </section>
@@ -100,6 +125,10 @@
       </div></div>
     </section>
 
+    <figure class="satellite-break reveal">
+<div class="satellite-visual"><img alt="NASA Landsat satellite view of the Esil River floodplain near Petropavl in April 2025" loading="lazy" src="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/154000/154265/kazakhstanflooding_oli2_20250424_web.jpg"/></div>
+<figcaption><span class="tiny-label">FROM ABOVE</span><strong>Flood risk has a geography</strong><span>NASA Landsat satellite view of the Esil floodplain near Petropavl, <b>April 2025, not the 2024 event.</b> Included as geographic context only.</span><a href="https://science.nasa.gov/earth/earth-observatory/spring-flooding-in-kazakhstan-154265/" rel="noopener noreferrer" target="_blank">Image and interpretation: NASA Earth Observatory ↗</a></figcaption>
+</figure>
     <!-- SECTION 3 -->
     <section class="section white-section" id="research" aria-labelledby="research-title">
       <div class="shell content-grid"><aside class="section-aside"><span class="section-code">3</span><div class="aside-rule"></div><span>STATE OF RESEARCH</span><p>Research doesn't offer<br>one simple answer.</p></aside><div class="section-main"><div class="section-kicker"><span class="asterisk">✳</span> CURRENT STATE OF RESEARCH <span>03</span></div><h2 class="display-title" id="research-title">Technology predicts.<br><em>Society responds.</em></h2><p class="lead">The academic literature suggests three distinct problems: estimating physical flood danger, translating warnings into usable messages, and building the institutions and relationships that make action possible. Treating them as the same problem produces incomplete policy.</p>

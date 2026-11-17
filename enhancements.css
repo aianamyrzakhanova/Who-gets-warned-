@@ -1,0 +1,75 @@
+/* Who Gets Warned? Story edition. Additive styling; original research and interactions stay intact. */
+:root {--sea:#8bdbc9;--foam:#eaf6ef;--deep:#061d2b}
+body {overflow-x:hidden}
+.section, .impact-band {isolation:isolate}
+.hero {background:#061a29}
+.hero:before{background:radial-gradient(ellipse at 75% 45%,rgba(19,105,115,.42),transparent 48%),linear-gradient(120deg,#051824,#082a3e 84%)}
+.hero h1 {text-shadow:0 16px 55px rgba(0,0,0,.12)}
+.hero h1 i{background:linear-gradient(110deg,#aee9d5,#72bcce,#bdf0df);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .hero-copy{animation:rise-in 1.1s cubic-bezier(.21,.72,.28,1) both}
+.hero-visual{animation:hero-float 11s ease-in-out infinite}
+.hero-visual:after{content:'';position:absolute;inset:8% 1% 6%;border:1px solid rgba(157,223,219,.11);border-radius:50%;transform:rotate(-19deg);pointer-events:none}
+.map-markers circle:nth-child(1),.pulse-dot{animation:beacon 3s ease-in-out infinite}
+@keyframes beacon{50%{filter:drop-shadow(0 0 12px rgba(160,240,220,.95))}}
+@keyframes hero-float{50%{transform:translate3d(0,-18px,0)}}
+@keyframes rise-in{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+/* Compact progress rail for desktop navigation */
+.chapter-rail{position:fixed;z-index:88;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;padding:10px 8px;background:rgba(7,32,43,.78);backdrop-filter:blur(16px);border:1px solid rgba(207,239,230,.18);border-radius:30px;box-shadow:0 16px 50px rgba(0,0,0,.1)}
+.chapter-rail a{text-decoration:none;color:#b6d9d4;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;font:700 10px var(--head);transition:background .25s,transform .25s,color .25s}
+.chapter-rail a:hover,.chapter-rail a.is-active{background:#a7e2d2;color:#082836;transform:scale(1.08)}
+/* Full-bleed 2024 news photograph with transparent visual sourcing */
+.story-photograph{position:relative;height:min(79vh,740px);min-height:520px;overflow:hidden;background:#213946;color:white}
+.photo-image{position:absolute;inset:0;background:url('https://greenpost.ua/upload/media/2024/04/19/u-kazahstani-masshtabni-pavodky-2.jpg') center 49% / cover no-repeat;transform:scale(1.04);transition:transform 12s ease}
+.story-photograph.is-visible .photo-image{transform:scale(1)}
+.photo-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,25,35,.9),rgba(5,25,35,.49) 48%,rgba(5,25,35,.06)),linear-gradient(0deg,rgba(3,19,29,.6),transparent 55%)}
+.photo-copy{position:relative;height:100%;z-index:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.photo-index{font:800 10px var(--head);letter-spacing:.19em;color:#bde9e2}.photo-index span{margin-left:16px;color:#eac58b}
+.photo-copy h2{font:500 clamp(43px,6.2vw,91px)/1.08 var(--serif);max-width:850px;letter-spacing:-.05em;margin:25px 0}
+.photo-copy h2 em{color:#b8efe2;font-weight:500}
+.photo-copy p{max-width:570px;color:#e0ebe9;font-size:15px;line-height:1.7}
+.photo-copy a{color:#c8f2e6;font-size:11px;margin-top:18px;text-underline-offset:4px}
+/* Animated exposition panel */
+.warning-path{background:#092938;color:#eaf6f0;border-radius:6px;padding:36px 42px;margin:35px 0 45px;overflow:hidden;position:relative;box-shadow:0 25px 50px rgba(10,51,57,.12)}
+.warning-path:before{content:'';position:absolute;right:-160px;top:-230px;width:420px;height:420px;border-radius:50%;border:75px solid rgba(120,209,193,.05);pointer-events:none}
+.path-head{position:relative}.path-head .tiny-label{color:#85d8cb}.path-head h3{font:500 clamp(27px,3.4vw,43px)/1.2 var(--serif);margin:13px 0 5px}.path-head p{font-size:13px;color:#a9c9c9;margin:0}
+.path-controls{display:flex;align-items:center;gap:8px;margin:30px 0 25px;position:relative}
+.path-step{flex:1;border:1px solid rgba(199,241,229,.19);background:rgba(255,255,255,.04);color:#c1d9dc;text-align:left;display:flex;align-items:center;gap:10px;padding:17px 15px;transition:all .28s;border-radius:4px}
+.path-step span:last-child{font:700 15px var(--head);line-height:1.1}.path-step small{display:block;color:#84afb6;font:700 9px var(--head);margin-bottom:6px}
+.path-step .path-icon{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:rgba(132,216,201,.12);font-size:23px}
+.path-step.active{color:#082b32;background:#b8e6da;border-color:#b8e6da;transform:translateY(-2px)}.path-step.active small{color:#4f7a7a}
+.path-step.active .path-icon{background:#e7f8ef}
+.path-connector{height:1px;width:27px;background:repeating-linear-gradient(90deg,#8bd8c7 0 4px,transparent 4px 9px);animation:flow-line 1.5s linear infinite}
+@keyframes flow-line{to{background-position:27px 0}}
+.path-reading{min-height:125px;padding:22px 25px;background:rgba(3,22,34,.44);border-left:3px solid #a3e2d4;transition:opacity .18s,transform .18s}
+.path-reading.is-changing{opacity:.15;transform:translateY(7px)}
+.path-reading #path-tag{display:block;color:#9fddce;font:800 9px var(--head);letter-spacing:.15em}
+.path-reading h4{font:500 25px var(--serif);margin:7px 0}
+.path-reading p{color:#c4d9d8;margin:0;font-size:13px;line-height:1.7}
+.path-caveat{font-size:10px;color:#a2bec0;margin:13px 0 0}
+/* Sourced satellite geography image from a separate year */
+.satellite-break{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,1fr);margin:45px 0;min-height:345px;background:#dce9e3;border:1px solid #cbdfd7;border-radius:5px;overflow:hidden}
+.satellite-visual{min-height:320px;background:radial-gradient(circle at 50% 50%,#7ba7a5,#365e70)}
+.satellite-visual img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.satellite-break:hover img{transform:scale(1.055)}
+.satellite-break figcaption{display:flex;flex-direction:column;padding:34px 30px;justify-content:center;gap:10px}
+.satellite-break figcaption .tiny-label{color:#40858d}
+.satellite-break figcaption strong{font:500 29px/1.15 var(--serif);color:#193b42}
+.satellite-break figcaption span:not(.tiny-label){font-size:12px;color:#526a6d;line-height:1.75}
+.satellite-break figcaption a{font-size:11px;color:#236a73;text-underline-offset:3px}
+/* Motion: never hide a paragraph to preserve information accessibility */
+.reveal{opacity:1;transition:opacity .75s ease,transform .75s cubic-bezier(.23,.79,.3,1)}
+.js-motion .reveal:not(.is-visible){opacity:.35;transform:translateY(18px)}
+.js-motion .reveal.is-visible{opacity:1;transform:translateY(0)}
+/* Scroll transition typography; dense research retains readable layout */
+.research-theme{transition:background .25s,padding .25s}
+.research-theme:hover{background:rgba(76,157,155,.06)}
+.paper-card,.case-card,.cost-grid article{transition:transform .3s ease,box-shadow .3s ease}
+.paper-card:hover,.case-card:hover,.cost-grid article:hover{transform:translateY(-5px);box-shadow:0 15px 36px rgba(10,50,56,.1)}
+.section-kicker{letter-spacing:.15em}
+.chart-card{box-shadow:0 25px 65px rgba(22,68,73,.08)}
+.site-header{transition:background .3s ease,backdrop-filter .3s ease}
+.site-header.is-scrolled{position:fixed;background:rgba(7,30,43,.91);backdrop-filter:blur(20px);border-bottom:1px solid rgba(220,241,232,.16)}
+@media(max-width:1100px){.chapter-rail{display:none}.satellite-break{grid-template-columns:1.3fr 1fr}}
+@media(max-width:700px){.story-photograph{min-height:530px;height:67vh}.photo-copy h2{font-size:clamp(41px,9.5vw,65px)}.photo-copy p{font-size:13px}.photo-shade{background:linear-gradient(90deg,rgba(5,25,35,.88),rgba(5,25,35,.33)),linear-gradient(0deg,rgba(3,19,29,.7),transparent)}.warning-path{padding:26px 19px}.path-controls{gap:4px;margin:20px 0}.path-step{padding:11px 7px;display:block;text-align:center}.path-step .path-icon{margin:0 auto 9px}.path-step span:last-child{font-size:11px}.path-connector{width:10px;flex:none}.path-reading{padding:20px 17px}.satellite-break{grid-template-columns:1fr}.satellite-visual{height:260px;min-height:0}.satellite-break figcaption{padding:23px}.hero-visual{animation:none}}
+@media(prefers-reduced-motion:reduce){.hero-visual,.hero .hero-copy,.pulse-dot,.map-markers circle:nth-child(1){animation:none!important}.reveal,.photo-image{transition:none!important}.js-motion .reveal:not(.is-visible){opacity:1;transform:none}}
+@media print{.story-photograph{height:320px;min-height:0;break-inside:avoid}.photo-copy h2{font-size:38px}.photo-image{filter:grayscale(1)}.chapter-rail{display:none}.warning-path{background:#fff!important;color:#111!important}.path-step{color:#111!important}.path-reading p{color:#222!important}}
