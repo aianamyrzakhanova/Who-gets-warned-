@@ -126,3 +126,21 @@
 .theme-index {
     color: #287f83 !important;
 }
+/* Research sources: dark text on light cards */
+
+.paper-card h3,
+.paper-card h4,
+.source-card h3,
+.source-card h4,
+.research-card h3,
+.research-card h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* Keep descriptions readable */
+.paper-card p,
+.source-card p,
+.research-card p {
+    color: #52676d !important;
+}
