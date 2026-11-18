@@ -58,3 +58,86 @@
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
+/* ==========================================
+   FINAL FIX — DARK HEADINGS ON LIGHT AREAS
+   ========================================== */
+
+/* 1. International case studies:
+   Google, FloodMapp, Community messengers */
+
+.case-card h3,
+.case-card h3 em,
+.highlight-case h3,
+.highlight-case h3 em {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 2. Five cost cards:
+   Environmental, Economic, Labor,
+   Governance, Data ethics */
+
+.cost-grid article h3,
+.cost-grid article h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 3. References and research sources */
+
+.source-heading h3,
+.source-heading h2,
+.source-list h3,
+.source-list h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 4. Statistics section:
+   When the river crossed the threshold */
+
+.impact-band h2,
+.impact-intro h2 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 5. Social-science problem section */
+
+.white-section .minor-heading,
+.white-section .mechanisms h4,
+.mechanisms article h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 6. Research paper cards */
+
+.paper-card h3,
+.paper-card h4,
+.paper-card strong {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 7. Other headings on light cards */
+
+.analysis-panel h3,
+.data-story h3,
+.question-card h3,
+.research-theme h3,
+.existing-head h3,
+.system-rows h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* 8. Keep titles on dark photos white */
+
+.hero h1,
+.hero h1 i,
+.story-photograph h2,
+.story-photograph h2 em {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
