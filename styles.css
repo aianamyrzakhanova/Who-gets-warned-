@@ -50,3 +50,18 @@
 .quote-credit {
     color: #476b70 !important;
 }
+/* Research Question text color */
+
+.question-card h3 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+.question-card h3 em {
+    color: #287f83 !important;
+    -webkit-text-fill-color: #287f83 !important;
+}
+
+.question-card p {
+    color: #476b70 !important;
+}
