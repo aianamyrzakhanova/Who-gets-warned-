@@ -65,3 +65,18 @@
 .question-card p {
     color: #476b70 !important;
 }
+/* Data section headings */
+
+.data-story h3 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+.data-story .tiny-label {
+    color: #287f83 !important;
+    -webkit-text-fill-color: #287f83 !important;
+}
+
+.data-story p {
+    color: #52676d !important;
+}
