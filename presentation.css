@@ -1,37 +1,36 @@
-#research .paper-card {
-  color: var(--heading-on-light) !important;
-  -webkit-text-fill-color: var(--heading-on-light) !important;
-}
-#research .paper-card p {
-  color: #52676d !important;
-  -webkit-text-fill-color: #52676d !important;
+  -webkit-text-fill-color: #287f83 !important;
 }
 
-/* Light statistics panel in the opening section */
-.impact-band .impact-intro h2 {
+/* Readable headings in pale research and cost cards even if their
+   parent link or old presentation styles set color to white. */
+.section.white-section .paper-card,
+.section.white-section .paper-card :is(h3,h4,strong),
+.case-section .case-card :is(h2,h3),
+.cost-section .cost-grid article h3 {
   color: var(--heading-on-light) !important;
   -webkit-text-fill-color: var(--heading-on-light) !important;
 }
 
-/* Keep titles on deliberately dark areas light, including their spans */
+/* Intentionally dark panels: preserve light typography. */
 .hero .hero-copy h1,
 .story-photograph .photo-copy h2,
-#solution .display-title,
-#solution .display-title em,
-#solution .solution-header h3,
-#solution .flow-diagram h4,
-#solution .dark-analysis h3,
 .warning-path .path-head h3,
 .warning-path .path-reading h4,
 .delta-exhibit .delta-heading h3,
 .policy-lab .policy-lab-top h2,
 .policy-lab #policy-name,
-.verdict-section h2 {
+.verdict-section h2,
+.section #solution-title,
+.section #solution-title em,
+#solution .solution-header h3,
+#solution .flow-diagram h4,
+#solution .dark-analysis h3 {
   color: var(--heading-on-dark) !important;
   -webkit-text-fill-color: var(--heading-on-dark) !important;
 }
 
-/* Retain distinctive hero/photo/verdict accents */
+/* Restore the design's intentional green accents on photographs and
+   the dark solution section. */
 .hero .hero-copy h1 i {
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
@@ -42,13 +41,13 @@
   -webkit-text-fill-color: #b8efe2 !important;
 }
 
-/* Active policy choice is pale, unlike the surrounding dark policy lab */
+/* Selected options have pale backgrounds; keep their labels readable. */
 .policy-lab .policy-choice.is-selected strong {
   color: #103444 !important;
   -webkit-text-fill-color: #103444 !important;
 }
 
-/* Print contrast */
+/* Print remains legible even in sections that are dark on screen. */
 @media print {
   .policy-lab :is(h2,h3),
   .delta-exhibit h3 {
