@@ -9,12 +9,8 @@
 @media(max-width:700px){.presentation-map-inner{display:block}.presentation-map-inner>*{padding:26px 0;border-right:0;border-bottom:1px solid #3d5c67}.presentation-map-inner>*:last-child{border-bottom:0}.route-card>b{font-size:23px}.delta-exhibit{padding:27px 18px}.delta-heading h3{font-size:30px}.delta-bars{height:220px;gap:7px}.delta-graphic{height:135px}.delta-value{font-size:16px}.blindspot{padding:24px 16px}.blindspot-head h3{font-size:28px}.blindspot-steps{grid-template-columns:repeat(2,1fr);gap:6px}.blindstep{padding:14px 12px}.blindstep:after{display:none}.blindstep strong{font-size:13px}.blindspot-result{padding:20px}.blindspot-result h4{font-size:24px}.policy-lab{padding:65px 0}.policy-grid{grid-template-columns:1fr}.policy-choice{padding:17px 20px;gap:4px}.policy-choice strong{font-size:22px}.policy-content{display:block;padding:23px}.policy-result-icon{width:65px;height:65px;font-size:47px;margin-bottom:20px}.policy-meta{border-left:0;padding-left:0;border-top:1px solid #52717b;margin-top:20px;padding-top:18px}}
 @media(prefers-reduced-motion:reduce){.delta-graphic span{transition:none!important;transform:scaleY(1)!important}.policy-choice,.blindstep{transition:none!important;transform:none!important}}
 @media print{.presentation-map,.policy-lab,.blindspot,.delta-exhibit{break-inside:avoid}.policy-lab,.delta-exhibit{background:#fff!important;color:#111!important}.policy-lab *,.delta-exhibit *{color:#111!important}}
-/* GLOBAL FIX: Dark blue headings */
 
-h1, h2, h3, h4, h5, h6 {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
-}
+
 
 /* Keep headings white on dark sections */
 
@@ -30,6 +26,35 @@ h1, h2, h3, h4, h5, h6 {
 .dark-card h2,
 .dark-card h3,
 .dark-card h4 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+/* FIX: Headings on light backgrounds */
+
+.white-section .minor-heading,
+.mist-section .minor-heading,
+.white-section .mechanisms h4,
+.mist-section .mechanisms h4,
+.white-section .research-theme h3,
+.mist-section .research-theme h3,
+.white-section .paper-card h4,
+.mist-section .paper-card h4,
+.paper-card h4,
+.mechanisms h4,
+.minor-heading {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* Restore white headings on dark backgrounds */
+
+.hero h1,
+.navy-section h2,
+.navy-section h3,
+.navy-section h4,
+.warning-path h3,
+.delta-exhibit h3,
+.story-photograph h2 {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
