@@ -112,3 +112,17 @@
 .system-rows p {
     color: #52676d !important;
 }
+/* Research section headings */
+
+.research-theme h3 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+.research-theme p {
+    color: #52676d !important;
+}
+
+.theme-index {
+    color: #287f83 !important;
+}
