@@ -80,3 +80,19 @@
 .data-story p {
     color: #52676d !important;
 }
+/* Existing flood systems section */
+
+.existing-head h3 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+.system-rows h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+.existing-head p,
+.system-rows p {
+    color: #52676d !important;
+}
