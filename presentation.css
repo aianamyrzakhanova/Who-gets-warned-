@@ -1,6 +1,5 @@
-  -webkit-text-fill-color: #287f83 !important;
-}
-
+/* Presentation-first editorial motion. Additive to the existing site. */
+:root{--v3blue:#0a2f40;--v3sea:#c0e5db;--v3orange:#efba79}
 /* Readable headings in pale research and cost cards even if their
    parent link or old presentation styles set color to white. */
 .section.white-section .paper-card,
