@@ -1,113 +1,57 @@
-
-/* Presentation-first editorial motion. Additive to the existing site. */
-:root{--v3blue:#0a2f40;--v3sea:#c0e5db;--v3orange:#efba79}
-.presentation-map{background:#082c3b;color:#eaf7f3;border-top:1px solid #3b6670;border-bottom:1px solid #355764}.presentation-map-inner{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:0;min-height:185px}.presentation-map-inner>*{padding:32px 26px;border-right:1px solid #3d5c67}.presentation-map-inner>*:first-child{padding-left:0}.presentation-map-inner>*:last-child{border-right:0}.map-intro .tiny-label{color:#85cfcb}.map-intro h2{font:500 29px/1.13 var(--serif);margin:12px 0 8px}.map-intro p{font-size:11px;color:#bdd3d6;line-height:1.7;margin:0}.route-card{text-decoration:none;display:flex;flex-direction:column;gap:5px;position:relative;transition:background .3s}.route-card:hover{background:rgba(159,222,211,.12)}.route-card>span{font:800 10px var(--head);color:#edc68e;letter-spacing:.12em}.route-card>b{font:500 24px/1.3 var(--serif);margin-top:8px}.route-card small{font-size:11px;color:#9fc0c5}.route-card i{position:absolute;right:18px;top:30px;color:#99d7ca}
-.delta-exhibit{margin:43px 0 50px;padding:38px 37px 25px;background:#0a2939;color:#eef8f3;border-radius:4px;position:relative;overflow:hidden}.delta-exhibit:before{content:'';position:absolute;width:450px;height:450px;border:1px solid rgba(142,221,210,.18);border-radius:50%;right:-280px;top:-280px;box-shadow:0 0 0 75px rgba(139,221,214,.035),0 0 0 150px rgba(139,221,214,.025)}.delta-heading{position:relative}.delta-heading .tiny-label{color:#b5ddd5}.delta-heading h3{font:500 36px var(--serif);margin:13px 0}.delta-heading p{font-size:12px;color:#bad0d1;max-width:570px;line-height:1.7}.delta-heading em{color:#fff}.delta-bars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:290px;gap:16px;align-items:end;margin-top:26px;position:relative}.delta-col{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:9px}.delta-value{font:600 clamp(17px,2vw,29px) var(--serif);letter-spacing:-.04em;color:#e9f6f2}.delta-graphic{height:195px;width:100%;display:flex;justify-content:center;align-items:flex-end;border-bottom:1px solid rgba(173,230,226,.45);position:relative}.delta-graphic span{display:block;width:min(70px,68%);height:calc(var(--bar) * 100%);background:linear-gradient(180deg,#d5f1e5,#3c9da4);transform-origin:bottom;transform:scaleY(.04);transition:transform 1.1s cubic-bezier(.19,1,.22,1);border-radius:3px 3px 0 0;box-shadow:0 -12px 35px rgba(169,232,220,.07)}.delta-exhibit.bars-visible .delta-graphic span{transform:scaleY(1)}.delta-col:nth-child(2) .delta-graphic span{transition-delay:.13s}.delta-col:nth-child(3) .delta-graphic span{transition-delay:.26s}.delta-col:nth-child(4) .delta-graphic span{transition-delay:.39s}.delta-col>b{font:700 11px var(--head);color:#b9d8d7}.delta-annotation{display:flex;align-items:start;gap:14px;border-top:1px solid #355869;margin-top:25px;padding-top:21px}.delta-icon{width:29px;height:29px;border:1px solid #d4aa77;border-radius:50%;color:#f0c48d;display:grid;place-items:center;flex-shrink:0}.delta-annotation p{margin:0;font-size:11px;color:#b7ccd0;line-height:1.8}.delta-annotation strong{color:#fff}.delta-annotation a{color:#aee9d7}
-.blindspot{margin:45px 0 26px;background:#e0eee9;padding:35px 38px;border:1px solid #c4d8d1}.blindspot-head h3{font:500 36px/1.25 var(--serif);letter-spacing:-.04em;margin:12px 0}.blindspot-head h3 em{color:#32878a}.blindspot-head p{font-size:13px;color:#54747a}.blindspot-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin:25px 0 0}.blindstep{background:#f6faf7;border:1px solid #b8d6cd;padding:18px 10px 16px;text-align:left;min-width:0;transition:background .24s,transform .24s,border-color .24s;position:relative}.blindstep:after{content:'→';position:absolute;right:-10px;top:28px;font-size:19px;color:#4b928d;z-index:2}.blindstep:last-child:after{content:''}.blindstep.is-selected{background:#0c3443;color:#fff;border-color:#0c3443;transform:translateY(-5px)}.blindstep span{display:block;font:800 10px var(--head);color:#418c90;letter-spacing:.1em}.blindstep.is-selected span{color:#acddd2}.blindstep strong{display:block;font:700 15px var(--head);margin:7px 0}.blindstep small{display:block;font-size:10px;line-height:1.5;color:#6b8487}.blindstep.is-selected small{color:#b8ced1}.blindspot-result{background:#f9fcf9;display:grid;grid-template-columns:1fr;gap:5px;padding:24px 27px;border:1px solid #c1d6cf;min-height:190px;transition:background .3s}.blindspot-result.is-flashing{background:#d3e8e1}.result-mark{display:flex;justify-content:space-between;align-items:center}.result-mark span:first-child{font:800 10px var(--head);color:#298080;letter-spacing:.12em}.result-wave{font-size:43px;color:#6daca8;line-height:1}.blindspot-result h4{font:500 28px var(--serif);margin:0;color:#173c43}.blindspot-result p{font-size:13px;color:#536c72;margin:0;max-width:720px;line-height:1.8}.blindspot-foot{font-size:10px;color:#687e83;line-height:1.7;margin:14px 0 0}
-.policy-lab{background:#071c29;color:#ebf7ef;padding:104px 0 100px;position:relative;overflow:hidden}.policy-lab:before{content:'';position:absolute;right:-200px;top:-300px;width:850px;height:850px;border:1px solid rgba(169,225,210,.12);border-radius:50%;box-shadow:0 0 0 90px rgba(169,225,210,.025),0 0 0 180px rgba(169,225,210,.02)}.policy-lab .shell{position:relative}.policy-lab-top .tiny-label{color:#a2d6cc}.policy-lab-top h2{font:500 clamp(48px,6vw,75px)/1.1 var(--serif);letter-spacing:-.05em;margin:18px 0}.policy-lab-top p{font-size:15px;line-height:1.7;color:#bbced1;max-width:750px}.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:35px 0 16px}.policy-choice{background:#102f3e;border:1px solid #375767;color:#d9e9e7;padding:23px 24px;text-align:left;transition:background .25s,border-color .25s,transform .25s;display:flex;flex-direction:column;gap:10px}.policy-choice:hover{transform:translateY(-4px);border-color:#8fbeb8}.policy-choice.is-selected{background:#b7dfd3;color:#103444;border-color:#b7dfd3}.policy-choice span{font:800 10px var(--head);letter-spacing:.12em;color:#8ed6cf}.policy-choice.is-selected span{color:#237c83}.policy-choice strong{font:500 clamp(20px,2.2vw,28px)/1.3 var(--serif)}.policy-choice small{font-size:11px;color:#a2bdc4}.policy-choice.is-selected small{color:#41787c}.policy-content{min-height:295px;border:1px solid #4e7380;display:grid;grid-template-columns:120px 1fr .85fr;gap:28px;padding:34px;background:rgba(255,255,255,.045);align-items:start;transition:background .24s}.policy-content.changing{background:rgba(164,222,211,.13)}.policy-result-icon{width:92px;height:92px;display:grid;place-items:center;font:500 74px var(--serif);border:1px solid #57858b;color:#a7ddd2;border-radius:50%}#policy-label{font:800 10px var(--head);letter-spacing:.12em;color:#a7ded3}#policy-name{font:500 29px/1.3 var(--serif);margin:13px 0 10px}#policy-copy{font-size:12px;line-height:1.9;color:#b9cfd2;margin:0}.policy-meta{border-left:1px solid #52717b;padding-left:26px;display:grid;gap:13px}.policy-meta small{display:block;font:800 9px var(--head);letter-spacing:.06em;text-transform:uppercase;color:#98c4c5;margin-bottom:4px}.policy-meta b{font:500 13px/1.5 var(--sans);color:#ecf8f2}.policy-lab-footer{margin-top:16px;font-size:11px;color:#97b9c0}
-@media(max-width:1100px){.presentation-map-inner{grid-template-columns:1fr 1fr}.map-intro{grid-column:1/-1;border-bottom:1px solid #3d5c67}.policy-content{grid-template-columns:85px 1fr}.policy-meta{grid-column:2}.policy-result-icon{width:75px;height:75px;font-size:55px}}
-@media(max-width:700px){.presentation-map-inner{display:block}.presentation-map-inner>*{padding:26px 0;border-right:0;border-bottom:1px solid #3d5c67}.presentation-map-inner>*:last-child{border-bottom:0}.route-card>b{font-size:23px}.delta-exhibit{padding:27px 18px}.delta-heading h3{font-size:30px}.delta-bars{height:220px;gap:7px}.delta-graphic{height:135px}.delta-value{font-size:16px}.blindspot{padding:24px 16px}.blindspot-head h3{font-size:28px}.blindspot-steps{grid-template-columns:repeat(2,1fr);gap:6px}.blindstep{padding:14px 12px}.blindstep:after{display:none}.blindstep strong{font-size:13px}.blindspot-result{padding:20px}.blindspot-result h4{font-size:24px}.policy-lab{padding:65px 0}.policy-grid{grid-template-columns:1fr}.policy-choice{padding:17px 20px;gap:4px}.policy-choice strong{font-size:22px}.policy-content{display:block;padding:23px}.policy-result-icon{width:65px;height:65px;font-size:47px;margin-bottom:20px}.policy-meta{border-left:0;padding-left:0;border-top:1px solid #52717b;margin-top:20px;padding-top:18px}}
-@media(prefers-reduced-motion:reduce){.delta-graphic span{transition:none!important;transform:scaleY(1)!important}.policy-choice,.blindstep{transition:none!important;transform:none!important}}
-@media print{.presentation-map,.policy-lab,.blindspot,.delta-exhibit{break-inside:avoid}.policy-lab,.delta-exhibit{background:#fff!important;color:#111!important}.policy-lab *,.delta-exhibit *{color:#111!important}}
-
-
-
-/* Keep headings white on dark sections */
-
-.hero h1,
-.hero h2,
-.hero h3,
-.hero h4,
-.dark-section h1,
-.dark-section h2,
-.dark-section h3,
-.dark-section h4,
-.dark-card h1,
-.dark-card h2,
-.dark-card h3,
-.dark-card h4 {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-}
-/* FIX: Headings on light backgrounds */
-
-.white-section .minor-heading,
-.mist-section .minor-heading,
-.white-section .mechanisms h4,
-.mist-section .mechanisms h4,
-.white-section .research-theme h3,
-.mist-section .research-theme h3,
-.white-section .paper-card h4,
-.mist-section .paper-card h4,
-.paper-card h4,
-.mechanisms h4,
-.minor-heading {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
+  -webkit-text-fill-color: #287f83 !important;
 }
 
-/* Restore white headings on dark backgrounds */
-
-.hero h1,
-.navy-section h2,
-.navy-section h3,
-.navy-section h4,
-.warning-path h3,
-.delta-exhibit h3,
-.story-photograph h2 {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
+/* Readable headings in pale research and cost cards even if their
+   parent link or old presentation styles set color to white. */
+.section.white-section .paper-card,
+.section.white-section .paper-card :is(h3,h4,strong),
+.case-section .case-card :is(h2,h3),
+.cost-section .cost-grid article h3 {
+  color: var(--heading-on-light) !important;
+  -webkit-text-fill-color: var(--heading-on-light) !important;
 }
 
-/* DARK HEADINGS ON LIGHT BACKGROUNDS */
-
-/* Main section headings */
-.white-section .display-title,
-.white-section .display-title em,
-.mist-section .display-title,
-.mist-section .display-title em {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
+/* Intentionally dark panels: preserve light typography. */
+.hero .hero-copy h1,
+.story-photograph .photo-copy h2,
+.warning-path .path-head h3,
+.warning-path .path-reading h4,
+.delta-exhibit .delta-heading h3,
+.policy-lab .policy-lab-top h2,
+.policy-lab #policy-name,
+.verdict-section h2,
+.section #solution-title,
+.section #solution-title em,
+#solution .solution-header h3,
+#solution .flow-diagram h4,
+#solution .dark-analysis h3 {
+  color: var(--heading-on-dark) !important;
+  -webkit-text-fill-color: var(--heading-on-dark) !important;
 }
 
-/* Research and social science headings */
-.white-section .minor-heading,
-.white-section .mechanisms h4,
-.mist-section .minor-heading,
-.mist-section .mechanisms h4,
-.research-theme h3,
-.research-bridge h3 {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
+/* Restore the design's intentional green accents on photographs and
+   the dark solution section. */
+.hero .hero-copy h1 i {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.story-photograph .photo-copy h2 em,
+.verdict-section h2 em {
+  color: #b8efe2 !important;
+  -webkit-text-fill-color: #b8efe2 !important;
 }
 
-/* International cases */
-.case-card h2,
-.case-card h3,
-.case-card h2 em,
-.case-card h3 em {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
+/* Selected options have pale backgrounds; keep their labels readable. */
+.policy-lab .policy-choice.is-selected strong {
+  color: #103444 !important;
+  -webkit-text-fill-color: #103444 !important;
 }
 
-/* Cost cards */
-.cost-grid article h3,
-.cost-grid article h4 {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
-}
-
-/* Research sources */
-.paper-card h4,
-.reading-list-heading h3,
-.source-heading,
-.source-list-heading {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
-}
-
-/* Impact statistics section */
-.impact-intro h2 {
-    color: #173746 !important;
-    -webkit-text-fill-color: #173746 !important;
+/* Print remains legible even in sections that are dark on screen. */
+@media print {
+  .policy-lab :is(h2,h3),
+  .delta-exhibit h3 {
+    color: #111 !important;
+    -webkit-text-fill-color: #111 !important;
+  }
 }
