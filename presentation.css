@@ -141,3 +141,55 @@
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
+/* DARK HEADINGS ON LIGHT BACKGROUNDS */
+
+/* Main section headings */
+.white-section .display-title,
+.white-section .display-title em,
+.mist-section .display-title,
+.mist-section .display-title em {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* Research and social science headings */
+.white-section .minor-heading,
+.white-section .mechanisms h4,
+.mist-section .minor-heading,
+.mist-section .mechanisms h4,
+.research-theme h3,
+.research-bridge h3 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* International cases */
+.case-card h2,
+.case-card h3,
+.case-card h2 em,
+.case-card h3 em {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* Cost cards */
+.cost-grid article h3,
+.cost-grid article h4 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* Research sources */
+.paper-card h4,
+.reading-list-heading h3,
+.source-heading,
+.source-list-heading {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
+
+/* Impact statistics section */
+.impact-intro h2 {
+    color: #173746 !important;
+    -webkit-text-fill-color: #173746 !important;
+}
